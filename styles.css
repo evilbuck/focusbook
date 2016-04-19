@@ -1,0 +1,76 @@
+div#focusbookTopContainer {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	background: #8b9dc3;
+	opacity: .95;
+	z-index: 999; /* or  greater value */
+	display: flex;
+	flex-direction: row;
+}
+
+div#focusbookMainContainer {
+	display: flex;
+	flex: 1;
+	margin-top: 30px;
+	flex-direction: column;
+	align-items: center;
+}
+
+div.focusbookActive {
+	height: 200px;
+	transition: 500ms ease-in-out;
+}
+
+div.focusbookPassive {
+	height: 100px;
+	transition: 500ms ease-in-out;
+}
+
+div.focusbookExpanding {
+	height: 100%;
+	transition: 60s ease-in;
+}
+
+span#focusbookMainText {
+	padding: 3px;
+	text-align: center;
+	font-family: helvetica, arial, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+}
+
+input.focusbookPassive {
+	display: none;
+}
+
+div#focusbookButtons {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+button.focusbookButton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+   	margin: 10px;
+   	visibility: hidden;
+}
+
+input#focusbookInput[type='text'] {
+  padding: 10px;
+  border: none;
+	font-family: helvetica, arial, sans-serif;
+ 	font-size: 16px;
+ 	border-radius: 5px;
+ 	background-color: #dfe3ee;
+}

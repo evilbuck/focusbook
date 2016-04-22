@@ -1,3 +1,5 @@
+"use strict";
+
 const SNOOZES = [
   'fuck off', 
   'later..', 

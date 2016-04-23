@@ -4,7 +4,7 @@
   "description": "This plugin will tell you why you opened facebook",
   "version": "1.2",
   "permissions": [
-    "https://www.facebook.com/*",
+    "https://*.facebook.com/*",
     "storage"
    ],
    "web_accessible_resources": [  
@@ -18,7 +18,7 @@
    "options_page": "options.html",
    "content_scripts": [
     {
-      "matches": ["https://www.facebook.com/*"],
+      "matches": ["https://*.facebook.com/*"],
       "run_at": "document_end",
       "css": ["styles.css"],
       "js": ["content_script.js"]

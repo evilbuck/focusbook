@@ -21,7 +21,7 @@
       "matches": ["https://*.facebook.com/*"],
       "run_at": "document_end",
       "css": ["styles.css"],
-      "js": ["content_script.js"]
+      "js": ["lib/scheduler.js", "content_script.js"]
     }
   ]
 }

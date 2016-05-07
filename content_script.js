@@ -1,8 +1,8 @@
 "use strict";
 
 const SNOOZES = [
-  'later..', 
-  "leave me alone", 
+  'later..',
+  "leave me alone",
   'go bother someone else',
   'a few more minutes',
   'snooze button',
@@ -40,7 +40,7 @@ chrome.storage.sync.get({
   if (!app.safeMode) {
     app.snoozes = [...app.snoozes, UNSAFE_SNOOZES];
     app.questions = [...app.questions, UNSAFE_QUESTIONS];
-  } 
+  }
 });
 
 
@@ -145,10 +145,14 @@ function createElement() {
   document.all[0].appendChild(app.topContainerElement);
 }
 
-createElement();
-showTask();
-
-
-
-
-
+new Scheduler()
+.then((scheduler) => {
+  if (scheduler.isActive()) {
+    console.log("I'm active");
+    createElement();
+    showTask();
+  }
+})
+.catch((error) => {
+  // TODO: think about how to catch and report errors
+});

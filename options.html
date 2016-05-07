@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html>
-<head><title>Focusbook settings</title></head>
-<body style="width:200px;">
+<head>
+  <title>Focusbook settings</title>
+  <link rel="stylesheet" href="/css/options.css" charset="utf-8">
+</head>
+<body>
+  <div class="group">
+    <label>
+      <input type="checkbox" id="safemode">
+      Safe for work (no swearing)
+    </label>
+  </div>
 
+  <div class="group">
+    <label for="enforce-schedule">
+      <input type="checkbox" name="enforce-schedule" id="enforce-schedule">
+      Enforce Schedule?
+    </label>
+  </div>
 
-<label>
-  <input type="checkbox" id="safemode">
-  Safe for work (no swearing)
-</label>
+  <div class="enforce-schedule-group group">
+    <div>
+      <label for="start-time-hours">start time:</label>
+      <input type="number" id="start-time-hours" placeholder="6" min="0" max="23"><input type="number" id="start-time-minutes" step="1" placeholder="00" min="0" max="59">
+    </div>
+
+    <div>
+      <label for="end-time">end time:</label>
+        <input type="number" id="end-time-hours" placeholder="6" min="0" max="23"><input type="number" id="end-time-minutes" step="1" placeholder="00" min="0" max="59">
+    </div>
+  </div>
 
 <div id="status"></div>
-<button id="save">Save</button>
+<div class="form-footer">
+  <button id="save">Save</button>
+</div>
 
+<script src="lib/scheduler.js"></script>
 <script src="options.js"></script>
 </body>
 </html>

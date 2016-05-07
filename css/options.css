@@ -1,0 +1,47 @@
+body {
+  color: #1a1a1a;
+  font-size: 18px;
+  width: 290px;
+  height: 200px;
+}
+
+button {
+  background: linear-gradient(to bottom, #7abcff 0%,#60abf8 44%,#4096ee 100%);
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  color: #1a1a1a;
+  padding: 5px 16px;
+}
+
+.group {
+  margin: 7px 4px 7px 4px;
+  padding: 2px;
+}
+
+.enforce-schedule-group label {
+  display: inline-block;
+  width: 5em;
+}
+
+.enforce-schedule-group input {
+  border: 1px solid #666666;
+  border-radius: 3px;
+  padding: 2px;
+  margin: 3px;
+  width: 3em;
+}
+
+.disabled {
+  color: #a89e9e;
+}
+
+.disabled input {
+  color: #a89e9e;
+  font-size: 16px;
+  border-color: #a89e9e;
+}
+
+.form-footer {
+  text-align: center;
+}
